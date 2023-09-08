@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Clever | Portal</title>
+    <link
+      rel="shortcut icon"
+      href="https://assets.clever.com/launchpad/9ad661680/favicon.ico?1"
+    />
+    <style type="text/css">
+      html {
+        overflow: auto;
+      }
+
+      html,
+      body,
+      iframe {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        border: none;
+      }
+      
+
+      iframe {
+        display: block;
+        width: 100%;
+        border: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .background--custom {
+        background: linear-gradient(90deg, #6470f5, #693295, #b1c4f4);
+        background-size: 300% 300%;
+        animation: gradient 4s alternate infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 100%;
+        }
+      }
+
+      h1 {
+        font-family: Verdana;
+        
+      }
+
+      p {
+        font-family: Verdana;
+      }
+
+      .content {
+        border: 20px solid white;
+        width: 70%;
+        height: 70%;
+        padding: 1%;
+        margin: auto;
+        border-radius: 3rem;
+        background: rgba(255, 255, 255, 0);
+      }
+
+      input[type="button"] {
+        font-size: 16px;
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        color: white;
+        padding: 0.25em 0.5em;
+        background-color: rgba(255, 255, 255, 0);
+        border: 5px solid white;
+        border-radius: 4px;
+      }
+      
+      input[type="text"] {
+        font-size: 16px;
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        color: white;
+        padding: 0.25em 0.5em;
+        background-color: rgba(255, 255, 255, 0);
+        border: 5px solid white;
+        border-radius: 4px;
+      }
+      
+      input[type="checkbox"] {
+        appearance: none;
+        margin: 0;
+        font: inherit;
+        color: white;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid currentColor;
+        border-radius: 0.15em;
+        display: grid;
+        place-content: center;
+        transform: translate(-25px,-20px);
+      }
+      
+      input[type="checkbox"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em white;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+      
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+      
+      .ultraviolet {
+        width: 85px;
+        color: white;
+        padding: 0.25em 0.5em;
+        background-color: rgba(255, 255, 255, 0);
+        display: grid;
+        place-content: center;
+        margin: 0;
+        position: absolute;
+        top: 45px;
+        transform: translate(10px,0px);
+      }
+
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: White;
+        opacity: 1; /* Firefox */
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("service worker registered"))
+          .catch((err) => console.log("service worker not registered", err));
+      }
+    </script>
+  </head>
+  <body>
+    <div class="background--custom" id="ui">
+      <br />
+      <div class="content" id="main">
+        <br />
+        <h1 style="color: white; text-align: center">
+          Welcom To Incog.Glitch.Me, The Anti-GoGuardian
+        </h1>
+        <p style="color: white; text-align: center">
+          To get started click download, enjoy! 😀 [PANIC BUTTON IS "="]
+        </p>
+        <p style="text-align: center">
+          <input type="text" id="url" placeholder="URL Here..." />
+          <input type="button" value="Go" onclick="go();" /><br /><br />
+          <input
+            type="button"
+            value="Keyboard Not Working? Click Here"
+            onclick="kb();"
+          /><br /><br />
+          <input type="button" value="Ultraviolet" onclick="ub();" />
+          <input type="button" value="Eclipsecraft" onclick="mc();" />
+          <input type="button" value="Games" onclick="gm();" />
+          <br />
+          <br />
+          <img
+            src="https://cdn.glitch.global/d6b5b5d5-36b5-4871-a01c-e7aa4996c468/Untitled%20drawing.png?v=1651776419342"
+          />
+          <br />
+          <label class="ultraviolet">
+          Blocked?
+          <input type="checkbox" id = "incog-uv">
+          </label>
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnout.com/FileSaver.js"></script>
+    <script>
+      var encode=function(message,ammount){this.char=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","1","2","3","4","5","6","7","8","9","0"];this.chars=[];this.message=message;for(var i=0;i<ammount;i++){this.chars.push(this.char[Math.floor(Math.random()*61)]);}return this.message+"-"+this.chars.join("");};
+      
+      var version = "3.3";
+      
+      var lock = false;
+      var ifrm = document.createElement("iframe");
+      ifrm.setAttribute("id", "ifrm");
+      ifrm.setAttribute("src", "https://bing.com");
+      ifrm.setAttribute("referrerpolicy", "no-referrer");
+
+      var dl = document.createElement("input");
+      dl.setAttribute("id", "dl");
+      dl.setAttribute("type", "button");
+      dl.setAttribute("value", "Download");
+      dl.setAttribute(
+        "onclick",
+        "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src='https://incog.glitch.me/dl.js';document.body.appendChild(s);})('script')"
+      );
+
+      var keyboard = false;
+
+      function ub() {
+        document.getElementById("ui").style.display = "none";
+        ifrm.setAttribute("src", "https://"+encode("incog-uv",16)+".eclipsecraft.xyz/");
+        document.body.appendChild(ifrm);
+        lock = true;
+      }
+
+      function mc() {
+        document.getElementById("ui").style.display = "none";
+        keyboard = true;
+        ifrm.setAttribute("src", "https://client.eclipsecraft.xyz/");
+        document.body.appendChild(ifrm);
+        lock = true;
+      }
+
+      function go() {
+        document.getElementById("ui").style.display = "none";
+        if(document.getElementById('incog-uv').checked){
+          if (document.getElementById("url").value === "") {
+            ifrm.setAttribute("src", "https://"+encode("incog-uv",16)+"eclipsecraft.xyz/?url=google.com");
+          } else {
+            if (
+              document.getElementById("url").value.substring(0, 8) === "https://"
+            ) {
+              ifrm.setAttribute("src", document.getElementById("url").value);
+            } else {
+              ifrm.setAttribute(
+                "src",
+                "https://"+encode("incog-uv",16)+".eclipsecraft.xyz/?url=" + document.getElementById("url").value
+              );
+            }
+          }
+        }else{
+          if (document.getElementById("url").value === "") {
+            ifrm.setAttribute("src", "https://bing.com/");
+          } else {
+            if (
+              document.getElementById("url").value.substring(0, 8) === "https://"
+            ) {
+              ifrm.setAttribute("src", document.getElementById("url").value);
+            } else {
+              ifrm.setAttribute(
+                "src",
+                "https://" + document.getElementById("url").value
+              );
+            }
+          }
+        }
+        document.body.appendChild(ifrm);
+        lock = true;
+      }
+
+      function gm() {
+        document.getElementById("ui").style.display = "none";
+        ifrm.setAttribute("src", "https://gl.eclipsecraft.xyz/list.html");
+        document.body.appendChild(ifrm);
+        lock = true;
+      }
+
+      function kb() {
+        keyboard = true;
+      }
+
+      console.log(window.location.search.substring(1));
+      if (window.location.search.substring(1) != "") {
+        document.getElementById("ui").style.display = "none";
+        ifrm.setAttribute("src", window.location.search.substring(1));
+        document.body.appendChild(ifrm);
+        lock = true;
+      }
+
+      setInterval(function () {
+        if (keyboard) {
+          document.getElementById("ifrm").contentWindow.focus();
+        }
+        var privacyBanner = document.querySelectorAll(
+          "[data-gg-privacy-banner-anchor]"
+        );
+        for (var i = 0; i < privacyBanner.length; i++) {
+          privacyBanner[i].parentNode.removeChild(privacyBanner[i]);
+        }
+      }, 100);
+
+      window.addEventListener(
+        "keydown",
+        function (e) {
+          document.getElementById("url").value === "";
+          if (e.key === "=") {
+            window.location.replace("https://clever.com/in/nhaschools/student/portal");
+          }
+          if (e.keyCode === 13 && !lock) {
+            go();
+          }
+        },
+        false
+      );
+
+      if (window.location.href === "https://incog.glitch.me/") {
+        document.getElementById("main").appendChild(dl);
+      }
+
+      function readTextFile(file) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+          if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+              var allText = rawFile.responseText;
+              if (allText != version) {
+                var update = confirm(
+                  "YOUR VERSION OF INCOG IS OUT OF DATE \n Would you like to update?"
+                );
+                if (update) {
+                  ((t) => {
+                    var s = document.createElement(t);
+                    s.type = "text/java" + t;
+                    s.src = "https://incog.glitch.me/dl.js";
+                    document.body.appendChild(s);
+                  })("script");
+                }
+              }
+            }
+          }
+        };
+        rawFile.send(null);
+      }
+
+      readTextFile("https://incog.glitch.me/version.txt");
+    </script>
+  </body>
+</html>
