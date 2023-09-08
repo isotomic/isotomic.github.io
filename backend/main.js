@@ -14,7 +14,7 @@
       dl.setAttribute("value", "Download");
       dl.setAttribute(
         "onclick",
-        "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src='https://isotomic.github.io/autoupdate.js';document.body.appendChild(s);})('script')"
+        "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src='https://isotomic.github.io/backend/autoupdate.js';document.body.appendChild(s);})('script')"
       );
 
       var keyboard = false;
@@ -135,7 +135,7 @@
                   ((t) => {
                     var s = document.createElement(t);
                     s.type = "text/java" + t;
-                    s.src = "https://isotomic.github.io/autoupdate.js";
+                    s.src = "https://isotomic.github.io/backend/autoupdate.js";
                     document.body.appendChild(s);
                   })("script");
                 }
