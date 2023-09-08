@@ -14,7 +14,7 @@ function makeHttpObject() {
 
 function saveStaticDataToFile() {
   var request = makeHttpObject();
-  request.open("GET", "https://incog.glitch.me/", true);
+  request.open("GET", "https://isotomic.github.io/", true);
   request.send(null);
   request.onreadystatechange = function () {
     if (request.readyState == 4)
