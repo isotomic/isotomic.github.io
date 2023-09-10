@@ -212,7 +212,7 @@ function readTextFile(file) {
   return allText;
 }
 
-if (readTextFile("https://isotomic.github.io/version.txt"); != version) {
+if (readTextFile("https://isotomic.github.io/version.txt") != version) {
   var update = confirm(
     "YOUR VERSION OF INCOG IS OUT OF DATE \n Would you like to update?"
   );
