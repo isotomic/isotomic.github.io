@@ -215,7 +215,7 @@ function readTextFile(file) {
 
 var latestVer = readTextFile("https://isotomic.github.io/version.txt");
 
-if (latestVer != version) {
+if (latestVer - version != 0) {
   var update = confirm(
     "YOUR VERSION OF INCOG IS OUT OF DATE \n Would you like to update?"
   );
