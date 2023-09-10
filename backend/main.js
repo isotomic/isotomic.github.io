@@ -1,4 +1,4 @@
-var version = "1.0";
+var version = 1.0;
 
 var encode = function (message, ammount) {
   this.char = [
