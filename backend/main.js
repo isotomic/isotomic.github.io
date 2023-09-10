@@ -219,10 +219,8 @@ if (latestVer != version) {
     "YOUR VERSION OF INCOG IS OUT OF DATE \n Would you like to update?"
   );
   if (update) {
-    ((t) => {
-      var s = document.createElement(t);
-      s.type = "text/java" + t;
+      const s = document.createElement('script');
       s.src = "https://isotomic.github.io/backend/autoupdate.js";
       document.body.appendChild(s);
-    })("script");
+  }
 }
