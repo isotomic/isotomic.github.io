@@ -1,3 +1,5 @@
+var version = "1.0";
+
 var encode = function (message, ammount) {
   this.char = [
     "a",
@@ -70,8 +72,6 @@ var encode = function (message, ammount) {
   }
   return this.message + "-" + this.chars.join("");
 };
-
-var version = "1.0";
 
 var lock = false;
 var ifrm = document.createElement("iframe");
