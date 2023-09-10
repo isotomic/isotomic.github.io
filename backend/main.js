@@ -205,23 +205,22 @@ function readTextFile(file) {
     if (rawFile.readyState === 4) {
       if (rawFile.status === 200 || rawFile.status == 0) {
         var allText = rawFile.responseText;
-        if (allText != version) {
-          var update = confirm(
-            "YOUR VERSION OF INCOG IS OUT OF DATE \n Would you like to update?"
-          );
-          if (update) {
-            ((t) => {
-              var s = document.createElement(t);
-              s.type = "text/java" + t;
-              s.src = "https://isotomic.github.io/backend/autoupdate.js";
-              document.body.appendChild(s);
-            })("script");
-          }
-        }
       }
     }
   };
   rawFile.send(null);
+  return allText;
 }
 
-readTextFile("https://isotomic.github.io/version.txt");
+if (readTextFile("https://isotomic.github.io/version.txt"); != version) {
+  var update = confirm(
+    "YOUR VERSION OF INCOG IS OUT OF DATE \n Would you like to update?"
+  );
+  if (update) {
+    ((t) => {
+      var s = document.createElement(t);
+      s.type = "text/java" + t;
+      s.src = "https://isotomic.github.io/backend/autoupdate.js";
+      document.body.appendChild(s);
+    })("script");
+}
