@@ -11,10 +11,9 @@
       rel="shortcut icon"
       href="https://assets.clever.com/launchpad/9ad661680/favicon.ico?1"
     />
-    <link rel="stylesheet" type="text/css" href=backendurl+"backend/main.css" />
+    <link id="mainCss"rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <div class="background--custom" id="ui">
       <br />
       <div class="content" id="main">
         <br />
@@ -47,8 +46,15 @@
           </label>
         </p>
       </div>
-    </div>
-    <script src=backendurl+"backend/autoupdate.js"></script>
-    <script src=backendurl+"backend/main.js"></script>
+    <script id = "autoupdateJs"></script>
+    <script id = "mainJs"></script>
+    <script>
+      var mainCss = document.getElementById('mainCss'); 
+      var mainJs = document.getElementById('mainJs');
+      var autoupdateJs = doccument.getElementById('autoupdateJs');
+      mainCss.href = backendurl + "backend/main.css";
+      mainJs.src = backendurl + "backend/main.js";
+      autoupdateJs.src = backendurl + "backend/autoupdate.js";
+    </script>
   </body>
 </html>
