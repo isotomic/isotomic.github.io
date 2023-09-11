@@ -109,26 +109,6 @@ function mc() {
 
 function go() {
   document.getElementById("main").style.display = "none";
-  if (document.getElementById("incog-uv").checked) {
-    if (document.getElementById("url").value === "") {
-      ifrm.setAttribute(
-        "src",
-        "https://" + encode("incog-uv", 16) + "eclipsecraft.xyz/?url=google.com"
-      );
-    } else {
-      if (document.getElementById("url").value.substring(0, 8) === "https://") {
-        ifrm.setAttribute("src", document.getElementById("url").value);
-      } else {
-        ifrm.setAttribute(
-          "src",
-          "https://" +
-            encode("incog-uv", 16) +
-            ".eclipsecraft.xyz/?url=" +
-            document.getElementById("url").value
-        );
-      }
-    }
-  } else {
     if (document.getElementById("url").value === "") {
       ifrm.setAttribute("src", "https://bing.com/");
     } else {
@@ -141,7 +121,6 @@ function go() {
         );
       }
     }
-  }
   document.body.appendChild(ifrm);
   lock = true;
 }
