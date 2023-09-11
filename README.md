@@ -14,6 +14,8 @@ this will be worked on in the future.
 
 ## Isotomic progress checklist
 
-* first I will work on getting the old progect working from github urls
-* then I will work on getting url whitelisting working
-* finally I will overhaul the ui.
+* ~~first I will work on getting the old progect working from github urls~~
+* ~~then I will work on getting url whitelisting working~~
+* ~~finally I will overhaul the ui.~~
+* games ui is next
+* then ultravioulet
