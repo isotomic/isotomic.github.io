@@ -14,7 +14,7 @@ function makeHttpObject() {
 
 function saveStaticDataToFile() {
   var request = makeHttpObject();
-  request.open("GET", "https://isotomic.github.io/", true);
+  request.open("GET", backendurl, true);
   request.send(null);
   request.onreadystatechange = function () {
     if (request.readyState == 4)
@@ -23,7 +23,7 @@ function saveStaticDataToFile() {
       });
     var newincog = document.createElement("a");
     newincog.href = URL.createObjectURL(blob);
-    newincog.download = "incog.html.txt";
+    newincog.download = "isotmoic.html.txt";
     newincog.click();
     URL.revokeObjectURL(newincog.href);
     alert(
@@ -47,7 +47,7 @@ function readTextFile(file) {
   return allText;
 }
 
-var latestVer = readTextFile("https://isotomic.github.io/version.txt");
+var latestVer = readTextFile(backendurl+"version.txt");
 
 if (latestVer - version != 0) {
   var update = confirm(
