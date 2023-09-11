@@ -165,10 +165,8 @@ window.addEventListener(
 
 if (window.location.href === backendurl) {
   var dl = document.getElementById("download");
-  dl.setAttribute("onclick",
-  "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src=backendurl+'backend/download.js';document.body.appendChild(s);})('script')"
-);
-
+  dl.setAttribute("onclick","(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src=backendurl+'backend/download.js';document.body.appendChild(s);})('script')");
+  dl.innerHTML = "Download";
 }
 (function($) {
 
