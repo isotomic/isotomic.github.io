@@ -72,6 +72,7 @@ var encode = function (message, ammount) {
 };
 
 var lock = false;
+
 var ifrm = document.createElement("iframe");
 ifrm.setAttribute("id", "ifrm");
 ifrm.setAttribute("src", "https://bing.com");
@@ -89,7 +90,7 @@ dl.setAttribute(
 var keyboard = false;
 
 function ub() {
-  document.getElementById("ui").style.display = "none";
+  document.getElementById("main").style.display = "none";
   ifrm.setAttribute(
     "src",
     "https://" + encode("incog-uv", 16) + ".eclipsecraft.xyz/"
@@ -99,7 +100,7 @@ function ub() {
 }
 
 function mc() {
-  document.getElementById("ui").style.display = "none";
+  document.getElementById(main").style.display = "none";
   keyboard = true;
   ifrm.setAttribute("src", "https://client.eclipsecraft.xyz/");
   document.body.appendChild(ifrm);
@@ -107,7 +108,8 @@ function mc() {
 }
 
 function go() {
-  document.getElementById("ui").style.display = "none";
+  document.getElementById("main
+                          ").style.display = "none";
   if (document.getElementById("incog-uv").checked) {
     if (document.getElementById("url").value === "") {
       ifrm.setAttribute(
@@ -146,7 +148,7 @@ function go() {
 }
 
 function gm() {
-  document.getElementById("ui").style.display = "none";
+  document.getElementById("main").style.display = "none";
   ifrm.setAttribute("src", "https://gl.eclipsecraft.xyz/list.html");
   document.body.appendChild(ifrm);
   lock = true;
@@ -158,7 +160,7 @@ function kb() {
 
 console.log(window.location.search.substring(1));
 if (window.location.search.substring(1) != "") {
-  document.getElementById("ui").style.display = "none";
+  document.getElementById("main").style.display = "none";
   ifrm.setAttribute("src", window.location.search.substring(1));
   document.body.appendChild(ifrm);
   lock = true;
