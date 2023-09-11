@@ -153,7 +153,7 @@ window.addEventListener(
     document.getElementById("url").value === "";
     if (e.key === "=") {
       window.location.replace(
-        "https://clever.com/in/nhaschools/student/portal"
+        "https://drive.google.com/drive/my-drive"
       );
     }
     if (e.keyCode === 13 && !lock) {
