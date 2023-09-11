@@ -78,15 +78,6 @@ ifrm.setAttribute("id", "ifrm");
 ifrm.setAttribute("src", "https://bing.com");
 ifrm.setAttribute("referrerpolicy", "no-referrer");
 
-var dl = document.createElement("input");
-dl.setAttribute("id", "dl");
-dl.setAttribute("type", "button");
-dl.setAttribute("value", "Download");
-dl.setAttribute(
-  "onclick",
-  "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src=backendurl+'backend/download.js';document.body.appendChild(s);})('script')"
-);
-
 var keyboard = false;
 
 function ub() {
@@ -173,7 +164,11 @@ window.addEventListener(
 );
 
 if (window.location.href === backendurl) {
-  document.getElementById("main").appendChild(dl);
+  var dl = document.getElementById("download");
+  dl.setAttribute("onclick",
+  "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src=backendurl+'backend/download.js';document.body.appendChild(s);})('script')"
+);
+
 }
 (function($) {
 
