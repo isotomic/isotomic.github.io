@@ -148,7 +148,7 @@ function go() {
 
 function gm() {
   document.getElementById("main").style.display = "none";
-  ifrm.setAttribute("src", "https://gl.eclipsecraft.xyz/list.html");
+  ifrm.setAttribute("src", gamesurl);
   document.body.appendChild(ifrm);
   lock = true;
 }
