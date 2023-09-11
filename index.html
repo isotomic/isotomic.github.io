@@ -1,0 +1,56 @@
+    <script>
+      var version = 1.0;
+      var backendurl = "https://isotomic.github.io/"
+      var gamesurl = "https://isotomic.github.io/isotomic-games/"
+    </script>
+    <link
+      rel="shortcut icon"
+      href="https://assets.clever.com/launchpad/9ad661680/favicon.ico?1"
+    />
+    <link id="mainCss"rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+      <br />
+      <div class="content" id="main">
+        <br />
+        <h1 style="color: white; text-align: center">
+          Welcom To isotomic.github.io, The Anti-GoGuardian
+        </h1>
+        <p style="color: white; text-align: center">
+          To get started click download, enjoy! 😀 [PANIC BUTTON IS "="]
+        </p>
+        <p style="text-align: center">
+          <input type="text" id="url" placeholder="URL Here..." />
+          <input type="button" value="Go" onclick="go();" /><br /><br />
+          <input
+            type="button"
+            value="Keyboard Not Working? Click Here"
+            onclick="kb();"
+          /><br /><br />
+          <input type="button" value="Ultraviolet" onclick="ub();" />
+          <input type="button" value="Eclipsecraft" onclick="mc();" />
+          <input type="button" value="Games" onclick="gm();" />
+          <br />
+          <br />
+          <img
+            src="https://cdn.glitch.global/d6b5b5d5-36b5-4871-a01c-e7aa4996c468/Untitled%20drawing.png?v=1651776419342"
+          />
+          <br />
+          <label class="ultraviolet">
+          Blocked?
+          <input type="checkbox" id = "incog-uv">
+          </label>
+        </p>
+      </div>
+    <script id = "autoupdateJs"></script>
+    <script id = "mainJs"></script>
+    <script>
+      var mainCss = document.getElementById('mainCss'); 
+      var mainJs = document.getElementById('mainJs');
+      var autoupdateJs = document.getElementById('autoupdateJs');
+      mainCss.href = backendurl + "backend/main.css";
+      mainJs.src = backendurl + "backend/main.js";
+      autoupdateJs.src = backendurl + "backend/autoupdate.js";
+    </script>
+  </body>
+</html>
