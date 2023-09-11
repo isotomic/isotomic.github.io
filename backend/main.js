@@ -84,7 +84,7 @@ dl.setAttribute("type", "button");
 dl.setAttribute("value", "Download");
 dl.setAttribute(
   "onclick",
-  "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src='https://isotomic.github.io/backend/download.js';document.body.appendChild(s);})('script')"
+  "(t=>{var s=document.createElement(t);s.type='text/java'+t;s.src=backendurl+'backend/download.js';document.body.appendChild(s);})('script')"
 );
 
 var keyboard = false;
@@ -100,7 +100,7 @@ function ub() {
 }
 
 function mc() {
-  document.getElementById(main").style.display = "none";
+  document.getElementById("main").style.display = "none";
   keyboard = true;
   ifrm.setAttribute("src", "https://client.eclipsecraft.xyz/");
   document.body.appendChild(ifrm);
@@ -108,8 +108,7 @@ function mc() {
 }
 
 function go() {
-  document.getElementById("main
-                          ").style.display = "none";
+  document.getElementById("main").style.display = "none";
   if (document.getElementById("incog-uv").checked) {
     if (document.getElementById("url").value === "") {
       ifrm.setAttribute(
@@ -194,6 +193,6 @@ window.addEventListener(
   false
 );
 
-if (window.location.href === "https://isotomic.github.io/") {
+if (window.location.href === backendurl) {
   document.getElementById("main").appendChild(dl);
 }
