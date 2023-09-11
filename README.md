@@ -7,7 +7,7 @@ Isotomic is a current wip open souce of my previouse version incog.glitch.me tha
 Isotomic is the unblockable unblocker. This is because unlike most traditional unblockers, Isotomic masks internal urls behind a locally hosted file through the power of Iframes. This makes source urls increadibly hard to track and block by network admins. Also as a bonus, so long as you dont allow access to file urls in your extension settings, it can never be blocked! To further push the blocking capability, the Ultraviolet baackend url is encoded so that every single time you use it, it randomly generates a new unblocker url for you to access the Ultraviolet proxy, so if an admin blocks one url, Isotomic will generate you a new one instantly. This requires some serouse cloudflare shananagens thought.
 
 ## Cool, so how do I install it
-Simply go to isotomic.github.io and press download and remove the .txt from the end of the file (wip) or another approved url, such as isotomic.eclipsecraft.xyz and remove the .txt from the end of the file (aslo wip) or just download index.html in this repository.
+Simply go to [isotomic.github.io](https://isotomic.github.io) and press download or another approved url, such as [isotomic.eclipsecraft.xyz](https://isotomic.eclipsecraft.xyz) and press download or just download index.html in this repository.
 
 ## I wanna host it myself >:(
 this will be worked on in the future.
