@@ -4,7 +4,12 @@
 		<title>Dimension by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<script>
+			var version = 1.0;
+			var backendurl = "https://isotomic.github.io/"
+			var gamesurl = "https://isotomic.github.io/isotomic-games/"
+   		</script>
+		<link id="mainCss"rel="stylesheet" type="text/css"/>
 	</head>
 	<body class="is-preload">
 
@@ -49,7 +54,16 @@
 
 		<!-- Scripts -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script id = "autoupdateJs"></script>
+			<script id = "mainJs"></script>
+			<script>
+				var mainCss = document.getElementById('mainCss'); 
+				var mainJs = document.getElementById('mainJs');
+				var autoupdateJs = document.getElementById('autoupdateJs');
+				mainCss.href = backendurl + "backend/main.css";
+				mainJs.src = backendurl + "backend/main.js";
+				autoupdateJs.src = backendurl + "backend/autoupdate.js";
+			</script>
 
 	</body>
 </html>
