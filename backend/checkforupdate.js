@@ -57,7 +57,7 @@ function cu() {
     if (update) {
       saveStaticDataToFile();
     }else {
-      throw("No new version availible, you are already on the latest version " + version);
+      alert("No new version availible, you are already on the latest version " + version);
     }
   }
 }
